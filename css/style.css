@@ -1,0 +1,49 @@
+.navigation_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navigation_image {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navigation_image img {
+    width: 100px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  .navigation_title {
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  .navigation_title:hover {
+    color: skyblue;
+    font-size: 30px;
+    transition:ease-in,1s;
+  }
+  
+  .list_items {
+    display: flex;
+    align-items: center;
+  }
+  .list_items li {
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 18px;
+    font-size: 23px;
+  
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .list_items li:hover {
+    margin-top: 20px;
+    color: dodgerblue;
+  }
+  .images{
+    width: 100px;
+  }
