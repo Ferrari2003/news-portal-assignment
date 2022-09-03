@@ -99,17 +99,17 @@ const loadCategories = async () => {
                  </article>
                  </div>
                  <div class="d-flex align-items-center justify-content-around">
-                 <i class="fa-solid fa-eye"></i>
+                 <i class="fa-solid fa-eye-slash"></i>
                  <h6 class="views">${
                    detail.total_view ? detail.total_view : 'No View'
                  }</h6>
                  </div>
                  <div>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
                  <i class="fa-solid fa-star-half-stroke"></i>
+                 <i class="fa-regular fa-star"></i>                
+                 <i class="fa-regular fa-star"></i>                
+                 <i class="fa-regular fa-star"></i>                
+                 <i class="fa-regular fa-star"></i>                
                  </div>
                  <i class="fa-solid fa-arrow-right"></i>
                  <a href=""></a>
@@ -164,7 +164,7 @@ const loadCategories = async () => {
  
    <div class="d-flex justify-content-around align-items-center">
    
-    <i class="fa-solid fa-eye"></i>
+   <i class="fa-solid fa-eye-slash"></i>
    <h6 class="ms-2">${news.total_view ? news.total_view : 'No view'}</h6>
      
    </div>
@@ -185,4 +185,6 @@ const loadCategories = async () => {
    }
  }
  
- loadCategories()
+ loadCategories();
+
+
