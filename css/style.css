@@ -50,6 +50,9 @@
   display: flex;
   justify-content: space-around;
 }
+.images{
+  width: 40px;
+}
   
 
  

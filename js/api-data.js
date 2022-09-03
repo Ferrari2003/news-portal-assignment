@@ -17,4 +17,35 @@ const displayNews= categories => {
 }
 
 
+const loadCardPhotos = () =>{
+   fetch(`https://openapi.programming-hero.com/api/news/category/01`)
+   .then(Response => Response.json())
+   .then(data => dispalyCard(data.data))
+}
+
+const dispalyCard = cards =>{
+   const cardContainer =document.getElementById('news_details')
+   cards.forEach(cards =>{
+      const cardDiv =document.createElement('div');
+      cardDiv.classList.add('col')
+      cardDiv.innerHTML=`
+       <div class="card h-100">
+                <img src="${cards.thumbnail_url}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${cards.title}</h5>
+                  <p class="card-text">${cards.details}</p>
+                 <div class=''>
+                 <img src="${cards.author.img}" class="images" alt="...">
+                 <p>${cards.author.name}</p>
+                 <p>${cards.author.published_date}</p>
+                 </div>
+               
+                </div>
+      `;
+      cardContainer.appendChild(cardDiv)
+
+   })
+}
+
+loadCardPhotos();
 loadNews();
