@@ -20,8 +20,7 @@
     margin-left: 20px;
   }
   
-  .navigation_title:hover {
-    color: skyblue;
+  .navigation_title:hover { 
     font-size: 30px;
     transition:ease-in,1s;
   }
@@ -47,3 +46,10 @@
   .images{
     width: 100px;
   }
+
+  
+
+ 
+ 
+  
+  
