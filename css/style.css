@@ -50,9 +50,12 @@
   display: flex;
   justify-content: space-around;
 }
+.card-text{
+  text-overflow: ellipsis;
+}
+
 .images{
   width: 40px;
-  
 }
 
 

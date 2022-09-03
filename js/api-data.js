@@ -13,6 +13,7 @@ const displayNews= categories => {
     newsDiv.innerText =`${categorie.category_name}`
     newsConatainer.appendChild(newsDiv);
   });
+
    
 }
 
@@ -25,6 +26,9 @@ const loadCardPhotos = () =>{
 
 const dispalyCard = cards =>{
    const cardContainer =document.getElementById('news_details')
+ 
+   // dispalyCard
+
    cards.forEach(cards =>{
       const cardDiv =document.createElement('div');
       cardDiv.classList.add('col')
@@ -50,7 +54,11 @@ const dispalyCard = cards =>{
       cardContainer.appendChild(cardDiv)
 
    })
+
 }
+
+
+
 
 loadCardPhotos();
 loadNews();
