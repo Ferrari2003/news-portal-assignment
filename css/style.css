@@ -124,3 +124,10 @@
     flex-direction: column;
   }
 }
+#footer{
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: lightgray;
+  border-radius: 7px;
+  
+}
