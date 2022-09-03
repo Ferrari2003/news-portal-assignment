@@ -46,7 +46,10 @@
   .images{
     width: 100px;
   }
-
+#news-container{
+  display: flex;
+  justify-content: space-around;
+}
   
 
  
