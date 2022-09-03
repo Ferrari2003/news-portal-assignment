@@ -1,65 +1,126 @@
+
+/* start :  Navigation section */
 .navigation_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+}
+
+.navigation_image {
+  display: flex;
+  align-items: center;
+}
+
+.navigation_image img {
+  width: 100px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.navigation_title {
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 0.5s ease-in-out;
+}
+.girl-image{
+  width: 80px;
+}
+
+.navigation_title:hover {
+  font-size: 30px;
+  transition: ease-in,1s;
   
-  .navigation_image {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navigation_image img {
-    width: 100px;
-    border-radius: 7px;
-    cursor: pointer;
-  }
-  
-  .navigation_title {
-    cursor: pointer;
-    margin-left: 20px;
-  }
-  
-  .navigation_title:hover { 
-    font-size: 30px;
-    transition:ease-in,1s;
-  }
-  
-  .list_items {
-    display: flex;
-    align-items: center;
-  }
-  .list_items li {
-    list-style: none;
-    margin-right: 20px;
-    margin-top: 18px;
-    font-size: 23px;
-  
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .list_items li:hover {
-    margin-top: 20px;
-    color: dodgerblue;
-  }
-  .images{
-    width: 100px;
-  }
-#news-container{
+}
+
+.list_items {
+  display: flex;
+  align-items: center;
+}
+.list_items li {
+  list-style: none;
+  margin-right: 20px;
+  margin-top: 18px;
+  font-size: 23px;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.list_items li:hover {
+  margin-top: 20px;
+  color: dodgerblue;
+}
+
+/* end : Navigation section */
+
+/* start : categories section */
+
+.categories_blog {
   display: flex;
   justify-content: space-around;
+  margin-right: 50px;
 }
-.card-text{
+
+.categories {
+  border: none;
+  background: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* end : categories section */
+
+/* start : card section */
+
+.cards {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.thumbnail_img img {
+  width: 100%;
+}
+
+.authour_img {
+  width: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.author_details {
+  margin-left: 20px;
+}
+
+.card_details {
   text-overflow: ellipsis;
 }
 
-.images{
-  width: 40px;
+.views {
+  margin-left: 10px;
 }
 
+/* end : card section */
 
- 
- 
-  
-  
+/* start : footer */
+
+/* end : footer */
+
+/* Media Queries*/
+
+@media only screen and (max-width: 668px) {
+  .navigation_container {
+    flex-direction: column;
+  }
+
+  .list_items li {
+    font-size: 21px;
+  }
+
+  .categories_blog {
+    flex-direction: column;
+  }
+}

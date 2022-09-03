@@ -1,65 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>News_Protal_Assignment</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News Portal</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="photos/btv.jpg" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/4e6c12451b.js" crossori
-gin="anonymous"></script>
+    gin="anonymous"></script>
   </head>
   <body>
-    <!-- navigation section -->
+    <!-- start : header -->
+
     <header class="container mt-3">
-        <section class="navigation_container">
-          <div class="navigation_image">
-            <img src="photos/btv.jpg" alt="" />
-            <h4 class="navigation_title">Bangladesh</h4>
+      <section class="navigation_container">
+        <div class="navigation_image">
+          <img src="photos/btv.jpg" alt="" />
+          <h4 class="navigation_title">Bangladesh</h4>
+        </div>
+        <div>
+          <nav>
+            <ul id="navigation_items" class="list_items">
+              <li>Home</li>
+              <li>Contact</li>
+              <li data-bs-toggle="modal" data-bs-target="#cardModal">Blog</li>
+              <img src="photos/girl-zoom-black-right-logo-right.png" class="girl-image" alt="">
+            </ul>
+          </nav>
+          <!-- <div class="hamburger" id="hamburger_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div> -->
+        </div>
+      </section>
+      <hr class="mt-4 fw-bold" />
+    </header>
+    <!-- end : header -->
+    <main class="container">
+      <section>
+        <div>
+          <h3 id="news_blog" class="text-dark text-center mt-5"></h3>
+        </div>
+      </section>
+      <!-- start : categories section -->
+      <section>
+        <div class="row">
+          <div class="col">
+            <ul id="categories_blog" class="categories_blog"></ul>
           </div>
-          <div>
-            <nav>
-              <ul class="list_items">
-                <li>News</li>
-                <li>Contact</li>
-                <li>Blog</li>
-                <img class="images" src="photos/girl-zoom-black-right-logo-right.png" alt="">
+        </div>
+      </section>
+      <!-- end : categories section -->
 
-                
-              </ul>
-            </nav>
-            <div class="hamburger d-none">
-              <i class="fa-solid fa-bars"></i>
+      <!-- no news message -->
+      <section>
+        <div id="no_news_message" class="d-none">
+          <h2 class="text-dark text-center">
+            No News Found. Please try another one..
+          </h2>
+        </div>
+      </section>
+
+      <!-- start : card section -->
+
+      <section id="news_details" class="mt-4"></section>
+
+      <!-- end : card section -->
+
+      <!-- start : loader -->
+
+      <section id="loader" class="d-none">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </section>
+      <!-- end : loader -->
+
+      <!-- Modal -->
+      <section>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="cardModal"
+          tabindex="-1"
+          aria-labelledby="cardModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="cardModalLabel">
+                  Answering Questions
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body" id="modal_body">
+                <h5>01.What is the difference between var,let and const?</h5>
+                <p>
+                  <span class="fw-bold">Ans :</span> All three of these three
+                  keywords have similarities in their syntax for declaring
+                  variables. However, they differ in their usage and scope.
+                </p>
+
+                <h5>
+                  02.What is the difference between arrow function and regular
+                  function?
+                </h5>
+                <p>
+                  <span class="fw-bold">Ans :</span> Unlike regular functions,
+                  arrow functions do not have their own this . The value of this
+                  inside an arrow function remains the same throughout the
+                  lifecycle of the function and is always bound to the value of
+                  this in the closest non-arrow parent function..
+                </p>
+
+                <h5>
+                  03.What is the difference between map, forEach,filter and
+                  find?
+                </h5>
+                <p>
+                  <span class="fw-bold">Ans :</span> The forEach() method does
+                  not create a new array based on the given array. The map()
+                  method creates an entirely new array. The forEach() method
+                  returns “undefined“. The map() method returns the newly
+                  created array according to the provided callback function.
+                </p>
+
+                <h5>04.Why should we use template string?</h5>
+                <p>
+                  <span class="fw-bold">Ans :</span> Template strings are a
+                  powerful feature of modern JavaScript released in ES6. It lets
+                  us insert/interpolate variables and expressions into strings
+                  without needing to concatenate like in older versions of
+                  JavaScript. It allows us to create strings that are complex
+                  and contain dynamic elements.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
-        </section>
-        <hr class="mt-4 fw-bold" />
-      </header>
-        
-      <main>
-        <section class="container">
-           
-          <div id="news-container">
+        </div>
+      </section>
 
-          </div>
-        </section>
-        <!-- card section, -->
-        <section  class="container mt-4">
-          <div id="news_details" class="row row-cols-1 row-cols-md-3 g-4  d-flex justify-content-around align-items-center">
-            
+      <!-- News Details Modal -->
+
+      <!-- Modal -->
+      <section>
+        <div
+          class="modal fade"
+          id="newsDetailsModal"
+          tabindex="-1"
+          aria-labelledby="newsDetailsModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="newsDetailsModalLabel"></h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div id="modals_body" class="modal-body"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
-            
           </div>
-        </section>
-      </main>
-       
+        </div>
+      </section>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-   <script src="js/api-data.js"></script>
+    <!-- start : footer -->
+
+    <footer id="footer" class="d-none">
+      <p class="text-center text-secondary fs-4">
+        2022.All rights reserved || Stay in touch
+      </p>
+    </footer>
+
+    <!-- end : footer -->
+
+    <!-- bootstrap script link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS link -->
+    <script src="js/api-data.js"></script>
+   
   </body>
 </html>
-
-
-
-
-
