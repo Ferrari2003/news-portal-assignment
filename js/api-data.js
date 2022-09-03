@@ -34,12 +34,17 @@ const dispalyCard = cards =>{
                 <div class="card-body">
                   <h5 class="card-title">${cards.title}</h5>
                   <p class="card-text">${cards.details}</p>
-                 <div class=''>
+                 <div class='d-flex justify-content-around align-items-center'>
                  <img src="${cards.author.img}" class="images" alt="...">
-                 <p>${cards.author.name}</p>
-                 <p>${cards.author.published_date}</p>
+                 <p>${cards.author.name}</p>                 
+                 <i class="fa-solid fa-eye-low-vision">  ${cards.total_view }</i>
+                 <i class="fa-solid fa-star-half-stroke"></i>
+                 <i class="fa-regular fa-star"></i>
+                 <i class="fa-regular fa-star"></i>
+                 <i class="fa-solid fa-arrow-right"></i>
                  </div>
-               
+                 <p>${cards.author.published_date}</p>
+                  
                 </div>
       `;
       cardContainer.appendChild(cardDiv)
