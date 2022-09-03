@@ -1,6 +1,7 @@
 
 /* start :  Navigation section */
 .navigation_container {
+  font-style: italic;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +34,7 @@
 .navigation_title:hover {
   font-size: 30px;
   transition: ease-in,1s;
-  
+  color: dodgerblue;
 }
 
 .list_items {
@@ -41,11 +42,12 @@
   align-items: center;
 }
 .list_items li {
+  font-style: italic;
   list-style: none;
+  color: black;
   margin-right: 20px;
   margin-top: 18px;
   font-size: 23px;
-
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -53,6 +55,7 @@
 .list_items li:hover {
   margin-top: 20px;
   color: dodgerblue;
+  transform: rotate(360deg);
 }
 
 /* end : Navigation section */
@@ -130,4 +133,11 @@
   background-color: lightgray;
   border-radius: 7px;
   
+}
+#footer:hover{
+  font-style: italic;
+  font-weight: bold;
+  background-color: black;
+  transition: ease-in,1s;
+  cursor: pointer;
 }
